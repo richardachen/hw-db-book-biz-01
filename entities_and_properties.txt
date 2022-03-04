@@ -1,0 +1,23 @@
+entity 1: book, properties: Title, Genre, ISBN number (PK), Authors (FK), Editors (FK), Publisher (FK), Orders (FK), Royalties (FK)  
+entity 2: author, properties: AuthorID (PK), FirstName, LastName, Email, Phone
+entity 3: royalties, properties: ISBN (FK), AuthorID (FK), Amount
+entity 4: booksauthors, properties: ISBN (FK), AuthorID (FK)
+entity 5: editor, properties: EditorID (PK), FirstName, LastName, Email, Phone
+entity 6: bookseditors, properties: ISBN (FK), EditorID (FK)
+entity 7: publisher, properties: PublisherID (PK), PublisherName
+entity 8: order, properties: OrderID (PK), CustomerID (FK)
+entity 9 booksorders, properties: ISBN (FK), OrderID (FK)
+entity 10: customer, properties: CustomerID (PK), Orders, FirstName, LastName, Email, Phone
+
+1 to 3: 1:1
+1 to 4: 1:1
+1 to 6: 1:1
+1 to 7: N:1
+1 to 9: 1:1
+2 to 3: 1:1
+2 to 4: 1:1
+5 to 6: 1:1
+8 to 9: 1:1
+8 to 10: N:1
+
+Drawio Entity Relationship Diagram: https://drive.google.com/file/d/1LXrBhqbN2ZwWCVMfWfy8TM5d3qWd1L9h/view?usp=sharing
